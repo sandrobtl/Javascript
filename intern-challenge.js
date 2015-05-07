@@ -1,10 +1,12 @@
-var addOption = function() {
+document.getElementById("button-submit").addEventListener("click",addOption,false);
+
+function addOption () {
 	var ul = document.getElementById("list");
 	var li = document.createElement("li");
 	var label = document.createElement("label");
 	var input = document.createElement("input");
 	input.type = "checkbox";
-	if (document.getElementById("text-input").value != ''){
+	if (document.getElementById("text-input").value !== ''){
 		var text = document.getElementById("text-input").value;
 		input.addEventListener("click", selectedItem, false);
 		label.appendChild(input);
